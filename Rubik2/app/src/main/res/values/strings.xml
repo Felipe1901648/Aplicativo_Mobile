@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name"></string>
+    <string name="MensagemInicial">Faça seu Login</string>
+    <string name="usuario">Usuário</string>
+    <string name="senha">Senha</string>
+    <string name="botaoInicial">Entrar</string>
+    <string name="action_buscar">Buscar</string>
+    <string name="action_config">Config</string>
+    <string name="action_sair">Sair</string>
+    <string name="config">Configuração</string>
+    <string name="Pneu">Pneus</string>
+    <string name="eletrica">Elétrica</string>
+    <string name="oleo">Óleos</string>
+</resources>
