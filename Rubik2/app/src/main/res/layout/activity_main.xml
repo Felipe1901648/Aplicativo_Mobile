@@ -1,25 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-
-    <Button
-        android:id="@+id/eletrica_botao"
+    android:id="@+id/layoutMenuLateral"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+    <include layout="@layout/toolbar"/>
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/eletrica" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/oleo_botao"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/oleo" />
 
-    <Button
-        android:id="@+id/pneu_botao"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/Pneu" />
-</LinearLayout>
+        <Button
+            android:id="@+id/eletrica_botao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/eletrica" />
+
+        <Button
+            android:id="@+id/oleo_botao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/oleo" />
+
+        <Button
+            android:id="@+id/pneu_botao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Pneu" />
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/menu_lateral"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/menu_lateral_cabecalho"
+        app:menu="@menu/menu_lateral">
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -5,25 +5,26 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.Settings
 import android.util.Log
-import android.view.Menu
-import android.view.MenuItem
-import android.view.SearchEvent
-import android.view.ViewConfiguration
+import android.view.*
 import android.webkit.WebView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.SearchView
+import androidx.core.view.GravityCompat
+import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.toolbar.*
 
 
-class activityMenu : AppCompatActivity() {
+class activityMenu : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
 
         supportActionBar?.title="Produtos"
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         eletrica_botao.setOnClickListener {
             val ok = Intent(this, EletricaActivity:: class.java)
@@ -38,6 +39,42 @@ class activityMenu : AppCompatActivity() {
             val ok = Intent(this, PneuActivity:: class.java)
             startActivity(ok)
         }
+        configuraMenuLateral()
+    }
+
+    private fun configuraMenuLateral() {
+        var toogle = ActionBarDrawerToggle(
+                this,
+                layoutMenuLateral,
+                R.string.drawer_open,
+                R.string.drawer_close)
+        layoutMenuLateral.addDrawerListener(toogle)
+        toogle.syncState()
+        menu_lateral.setNavigationItemSelectedListener(this)
+    }
+
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.nav_pneu -> {
+                val ok = Intent(this, PneuActivity:: class.java)
+                startActivity(ok)
+            }
+            R.id.nav_oleo -> {
+                val ok = Intent(this, OleoActivity:: class.java)
+                startActivity(ok)
+            }
+            R.id.nav_eletrica -> {
+                val ok = Intent(this, EletricaActivity:: class.java)
+                startActivity(ok)
+            }
+            R.id.nav_sair -> {
+                val ok = Intent(this, MainActivity:: class.java)
+                startActivity(ok)
+            }
+        }
+
+        layoutMenuLateral.closeDrawer(GravityCompat.START)
+        return true
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -64,6 +101,8 @@ class activityMenu : AppCompatActivity() {
         } else if (id == R.id.action_config) {
             val ok = Intent(this, ConfigActivity:: class.java)
             startActivity(ok)
+        } else if (id == android.R.id.home){
+            layoutMenuLateral.openDrawer(GravityCompat.START)
         }
         return super.onOptionsItemSelected(item)
     }

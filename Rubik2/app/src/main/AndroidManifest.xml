@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.com.faculdade.rubik">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Rubik">
-        <activity android:name=".PneuActivity" android:theme="@style/AppTheme.Toolbar"></activity>
+        <activity android:name=".PneuActivity"
+            android:theme="@style/AppTheme.Toolbar"></activity>
         <activity
             android:name=".OleoActivity"
             android:theme="@style/AppTheme.Toolbar" />
@@ -26,6 +28,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".DisciplinaActivity"
+            android:theme="@style/AppTheme.Toolbar"
+            android:parentActivityName=".EletricaActivity"></activity>
     </application>
 
 </manifest>

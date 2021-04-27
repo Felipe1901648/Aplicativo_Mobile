@@ -11,4 +11,6 @@
     <string name="Pneu">Pneus</string>
     <string name="eletrica">Elétrica</string>
     <string name="oleo">Óleos</string>
+    <string name="drawer_open">Aberto</string>
+    <string name="drawer_close">Fechado</string>
 </resources>
