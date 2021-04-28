@@ -19,7 +19,7 @@
             android:name=".EletricaActivity"
             android:theme="@style/AppTheme.Toolbar" />
         <activity android:name=".ConfigActivity" />
-        <activity android:name=".activityMenu" />
+        <activity android:name=".activityMenu"  android:theme="@style/AppTheme.Toolbar"/>
         <activity android:name=".DebugActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

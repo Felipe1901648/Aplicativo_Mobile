@@ -10,8 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
-
+        <include layout="@layout/toolbar"/>
         <Button
             android:id="@+id/eletrica_botao"
             android:layout_width="match_parent"
@@ -30,7 +29,6 @@
             android:layout_height="wrap_content"
             android:text="@string/Pneu" />
     </LinearLayout>
-
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/menu_lateral"
         android:layout_width="wrap_content"

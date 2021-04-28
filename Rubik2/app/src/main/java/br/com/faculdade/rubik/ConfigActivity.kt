@@ -11,5 +11,7 @@ class ConfigActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.config)
 
+        supportActionBar?.title="Configurações"
+
     }
 }

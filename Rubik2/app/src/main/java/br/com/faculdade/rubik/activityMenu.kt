@@ -22,9 +22,8 @@ class activityMenu : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
+        setSupportActionBar(toolbar)
         supportActionBar?.title="Produtos"
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         eletrica_botao.setOnClickListener {
             val ok = Intent(this, EletricaActivity:: class.java)
@@ -101,8 +100,6 @@ class activityMenu : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         } else if (id == R.id.action_config) {
             val ok = Intent(this, ConfigActivity:: class.java)
             startActivity(ok)
-        } else if (id == android.R.id.home){
-            layoutMenuLateral.openDrawer(GravityCompat.START)
         }
         return super.onOptionsItemSelected(item)
     }
