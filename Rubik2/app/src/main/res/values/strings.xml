@@ -13,4 +13,8 @@
     <string name="oleo">Óleos</string>
     <string name="drawer_open">Aberto</string>
     <string name="drawer_close">Fechado</string>
+    <string name="action_adicionar">Adicionar</string>
+    <string name="excluir">Remover Elétrica</string>
+    <string name="excluir_pneu">Remover Pneu</string>
+    <string name="excluir_oleo">Remover Óleo</string>
 </resources>

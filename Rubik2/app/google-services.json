@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1026571051735",
+    "project_id": "rubik-f1918",
+    "storage_bucket": "rubik-f1918.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1026571051735:android:44dc41e34d0f517f824692",
+        "android_client_info": {
+          "package_name": "br.com.faculdade.rubik"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1026571051735-scbh3ahc5tlgmfngtbubk0hm14plcuuo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBowu_TEHlP2E9JaCEofBqK_14G5yRw3nA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1026571051735-scbh3ahc5tlgmfngtbubk0hm14plcuuo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

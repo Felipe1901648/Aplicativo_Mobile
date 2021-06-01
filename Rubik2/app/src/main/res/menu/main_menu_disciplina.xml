@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/action_remover"
+        android:title="@string/excluir"
+        app:showAsAction="never" />
+    <item android:id="@+id/action_remover_oleo"
+        android:title="@string/excluir_oleo"
+        app:showAsAction="never" />
+    <item android:id="@+id/action_remover_pneu"
+        android:title="@string/excluir_pneu"
+        app:showAsAction="never" />
+
+</menu>

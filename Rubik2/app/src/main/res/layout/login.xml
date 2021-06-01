@@ -26,8 +26,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:hint="@string/senha"/>
+
+    <CheckBox
+        android:id="@+id/campo_checkBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lembrar-me" />
 
     <Button
         android:id="@+id/botaoLogin"
@@ -39,6 +45,7 @@
         android:id="@+id/imagem_inicial"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
 
 
 </LinearLayout>
